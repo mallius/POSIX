@@ -19,7 +19,8 @@ PROGS = key_create \
 	sem_open \
 	mq_open \
 	01producers_consumer \
-	02producers_consumer
+	02producers_consumer \
+	sig
 
 all: pthread_key_create.c \
 	pthread_self.c \
@@ -40,7 +41,8 @@ all: pthread_key_create.c \
 	sem_open.c \
 	mq_open.c \
 	01pthread_mutex_producers_consumer.c \
-	02pthread_mutex_producers_consumer.c
+	02pthread_mutex_producers_consumer.c \
+	sig.c
 	gcc pthread_key_create.c -o key_create -lpthread
 	gcc pthread_self.c -o self -lpthread
 	gcc pthread_setschedparam.c -o setschedparam $(LIB)
@@ -61,6 +63,7 @@ all: pthread_key_create.c \
 	gcc mq_open.c -o mq_open $(LRT)
 	gcc 01pthread_mutex_producers_consumer.c -o 01producers_consumer $(LIB)
 	gcc 02pthread_mutex_producers_consumer.c -o 02producers_consumer $(LIB)
+	gcc sig.c -o sig
 
 .PHONY:clean
 clean:
