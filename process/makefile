@@ -1,4 +1,4 @@
-PROGS = fork fork2
+PROGS = fork test wait
 LIB = libapue.a
 
 all: $(PROGS)
@@ -8,5 +8,5 @@ all: $(PROGS)
 
 .PHONY:clean
 clean:
-	rm -f $(PROGS)
+	rm -f $(PROGS) core.*
 
