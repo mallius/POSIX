@@ -67,4 +67,4 @@ all: pthread_key_create.c \
 
 .PHONY:clean
 clean:
-	$(RM) $(PROGS) core*
+	$(RM) $(PROGS) core* *Wr*.a
