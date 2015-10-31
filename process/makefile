@@ -1,4 +1,4 @@
-PROGS = fork test wait exec system time sig_usr
+PROGS = fork test wait exec system time sig_usr daemonize
 LIB = libapue.a
 
 all: $(PROGS)
