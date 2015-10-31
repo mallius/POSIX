@@ -1,5 +1,5 @@
-#include "process.h"
-
+#include "include/apue.h"
+#include "include/process.h"
 
 int 
 main(void)
@@ -10,13 +10,14 @@ main(void)
 	{
 		err_sys("fork error");
 	}
-	else if(pid == 0)
+	else if(pid == 0)   			/* 第一个子进程 */
 	{
 		if((pid = fork()) < 0)
 			err_sys("fork error");
 		else if(pid > 0)
 			exit(0);
 
+		/* 第二个子进程 */
 		sleep(2);
 		printf("second child, parent pid = %d\n", getppid());
 		exit(0);

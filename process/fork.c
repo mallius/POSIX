@@ -1,4 +1,5 @@
-#include "process.h"
+#include "include/process.h"
+#include "include/apue.h"
 
 int glob = 6;
 char buf[] = "a write to stdout\n";
